@@ -11,6 +11,7 @@
     <modules>
         <module>start_boot</module>
         <module>excel</module>
+        <module>look-common</module>
     </modules>
 
     <properties>
