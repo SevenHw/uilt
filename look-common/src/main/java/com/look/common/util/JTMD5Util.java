@@ -3,6 +3,7 @@ package com.look.common.util;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.SystemUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.ResourceUtils;
@@ -40,7 +41,9 @@ public class JTMD5Util {
             }
         }else {
             for (byte b : hash) {
-                if ((b & 0xFF) < 0x10) hex.append("0");
+                if ((b & 0xFF) < 0x10) {
+                    hex.append("0");
+                }
                 hex.append(Integer.toHexString(b & 0xFF));
             }
         }
@@ -74,7 +77,7 @@ public class JTMD5Util {
     public static void main(String[] args) {
         try {
             JSONObject message = new JSONObject();
-            String time = String.valueOf(new Date().getTime());
+            String time = String.valueOf(System.currentTimeMillis());
             String code = String.valueOf((int)(Math.random()*900)+100);
             File jsonFile = ResourceUtils.getFile("classpath:data1.json");
             String json = FileUtils.readFileToString(jsonFile);
