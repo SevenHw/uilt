@@ -21,12 +21,11 @@
         <spring-boot-test.version>2.4.1</spring-boot-test.version>
         <junit.version>4.12</junit.version>
         <spring-test.version>5.3.9</spring-test.version>
-        <mybatis-plus.version>3.4.1</mybatis-plus.version>
         <mysql.version>5.1.47</mysql.version>
         <slf4j.version>1.7.21</slf4j.version>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <jackson.version>2.4.2</jackson.version>
-        <druid.version>1.1.18</druid.version>
+        <druid.version>1.1.10</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
         <servlet-api.version>2.5</servlet-api.version>
         <joda-time.version>2.5</joda-time.version>
@@ -40,6 +39,10 @@
         <jedis.version>2.7.2</jedis.version>
         <solrj.version>4.10.3</solrj.version>
         <fastjson.version>1.2.76</fastjson.version>
+        <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
+        <mybatis-plus-generator.version>3.2.0</mybatis-plus-generator.version>
+        <freemarker.version>2.3.28</freemarker.version>
+        <lombok.version>1.18.20</lombok.version>
     </properties>
     <!--统一管理jar包的版本的依赖，并不是实际的引入我们jar-->
     <dependencyManagement>
@@ -127,15 +130,31 @@
                 <scope>provided</scope>
             </dependency>
             <!-- Mybatis-plus -->
-
-            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus</artifactId>
-                <version>${mybatis-plus.version}</version>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
                 <scope>provided</scope>
             </dependency>
-
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
             <!-- MySql -->
             <dependency>
@@ -147,10 +166,11 @@
             <!-- 连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
+                <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
                 <scope>provided</scope>
             </dependency>
+
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
