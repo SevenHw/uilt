@@ -23,10 +23,11 @@
         <spring-boot-starter-data-elasticsearch.version>2.4.1</spring-boot-starter-data-elasticsearch.version>
         <spring-boot-starter-data-jpa.version>2.4.1</spring-boot-starter-data-jpa.version>
         <spring-boot-starter-data-redis.version>2.4.1</spring-boot-starter-data-redis.version>
+        <spring-boot-starter-tomcat.version>2.4.1</spring-boot-starter-tomcat.version>
         <junit.version>4.12</junit.version>
         <spring-test.version>5.3.9</spring-test.version>
         <mysql.version>5.1.47</mysql.version>
-        <slf4j.version>1.7.21</slf4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <jackson.version>2.4.2</jackson.version>
         <druid.version>1.1.10</druid.version>
@@ -67,6 +68,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${spring-boot-starter-data-jpa.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <version>${spring-boot-starter-tomcat.version}</version>
+                <scope>provided</scope>
             </dependency>
             <!--测试类依赖-->
             <dependency>
@@ -136,7 +143,6 @@
                 <version>${slf4j.version}</version>
                 <scope>provided</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>

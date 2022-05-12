@@ -1,5 +1,9 @@
 package com.look.common.util;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.HashMap;
 import java.util.Map;
 /**
@@ -7,6 +11,9 @@ import java.util.Map;
  * @Author like
  * @Date 2022/5/9 21:08
  **/
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Message {
     /**
      * 响应状态码，约定200成功，失败500
@@ -32,23 +39,5 @@ public class Message {
     public Message addInfo(String key,Object value) {
         getInfo().put(key, value);
         return this;
-    }
-    public Integer getCode() {
-        return code;
-    }
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-    public String getMsg() {
-        return msg;
-    }
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-    public Map<String, Object> getInfo() {
-        return info;
-    }
-    public void setInfo(Map<String, Object> info) {
-        this.info = info;
     }
 }

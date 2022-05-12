@@ -1,5 +1,5 @@
 server:
-  path: 8080
+  port: 8000
   servlet:
     context-path: /look/start
 
@@ -111,6 +111,7 @@ mybatis-plus:
       logic-not-delete-value: 1
       # 删除后
       logic-delete-value: 0
+#日志级别
 logging:
   level:
     root: info
