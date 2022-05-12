@@ -1,4 +1,4 @@
-package com.look.common.util.mybatisUtil;
+package com.look.common.config.mybatisConfig;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;

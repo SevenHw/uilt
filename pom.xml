@@ -12,6 +12,7 @@
         <module>start_boot</module>
         <module>excel</module>
         <module>look-common</module>
+        <module>look-es</module>
     </modules>
 
     <!--它用来管理所有依赖jar的版本-->
@@ -19,6 +20,8 @@
     <properties>
         <spring-boot-starter-web.version>2.4.1</spring-boot-starter-web.version>
         <spring-boot-test.version>2.4.1</spring-boot-test.version>
+        <spring-boot-starter-data-elasticsearch.version>2.4.1</spring-boot-starter-data-elasticsearch.version>
+        <spring-boot-starter-data-jpa.version>2.4.1</spring-boot-starter-data-jpa.version>
         <junit.version>4.12</junit.version>
         <spring-test.version>5.3.9</spring-test.version>
         <mysql.version>5.1.47</mysql.version>
@@ -53,7 +56,17 @@
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot-starter-web.version}</version>
             </dependency>
-
+            <!-- springBoot-es -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${spring-boot-starter-data-elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot-starter-data-jpa.version}</version>
+            </dependency>
             <!--测试类依赖-->
             <dependency>
                 <groupId>junit</groupId>
