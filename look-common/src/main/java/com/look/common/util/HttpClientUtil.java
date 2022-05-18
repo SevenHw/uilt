@@ -6,7 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.HttpVersion;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -16,6 +20,7 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicHttpResponse;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 /**
@@ -134,5 +139,23 @@ public class HttpClientUtil {
         }
 
         return resultString;
+    }
+
+    //爬虫数据解析
+    public static HttpResponse getHtml(HttpClient client, String url){
+        //获取响应文件，即HTML，采用get方法获取响应数据
+        HttpGet getMethod = new HttpGet(url);
+        HttpResponse response = new BasicHttpResponse(HttpVersion.HTTP_1_1, HttpStatus.SC_OK, "OK");
+
+        try {
+            //通过client执行get方法
+            response = client.execute(getMethod);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            //getMethod.abort();
+        }
+
+        return response;
     }
 }

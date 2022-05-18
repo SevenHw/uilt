@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.look.crawler.mapper.JobsMapper">
+    <resultMap id="JobsMapperMap" type="com.look.crawler.model.Jobs">
+        <id column="job_id" property="jobId" jdbcType="INTEGER"/>
+        <id column="job_name" property="jobName" jdbcType="VARCHAR"/>
+        <id column="company_name" property="companyName" jdbcType="VARCHAR"/>
+        <id column="work_addr" property="workAddr" jdbcType="VARCHAR"/>
+        <id column="salary" property="salary" jdbcType="VARCHAR"/>
+        <id column="push_date" property="pushDate" jdbcType="VARCHAR"/>
+        <id column="job_key" property="jobKey" jdbcType="VARCHAR"/>
+        <id column="data_source" property="dataSource" jdbcType="VARCHAR"/>
+        <id column="create_date" property="createDate" jdbcType="VARCHAR"/>
+        <id column="update_date" property="updateDate" jdbcType="VARCHAR"/>
+        <id column="data_status" property="dataStatus" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+</mapper>

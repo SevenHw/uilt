@@ -13,6 +13,7 @@
         <module>excel</module>
         <module>look-common</module>
         <module>look-es</module>
+        <module>look-crawler</module>
     </modules>
 
     <!--它用来管理所有依赖jar的版本-->
@@ -24,6 +25,7 @@
         <spring-boot-starter-data-jpa.version>2.4.1</spring-boot-starter-data-jpa.version>
         <spring-boot-starter-data-redis.version>2.4.1</spring-boot-starter-data-redis.version>
         <spring-boot-starter-tomcat.version>2.4.1</spring-boot-starter-tomcat.version>
+        <spring-boot-starter-freemarker.version>2.4.1</spring-boot-starter-freemarker.version>
         <junit.version>4.12</junit.version>
         <spring-test.version>5.3.9</spring-test.version>
         <mysql.version>5.1.47</mysql.version>
@@ -73,6 +75,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-tomcat</artifactId>
                 <version>${spring-boot-starter-tomcat.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-freemarker</artifactId>
+                <version>${spring-boot-starter-freemarker.version}</version>
                 <scope>provided</scope>
             </dependency>
             <!--测试类依赖-->
