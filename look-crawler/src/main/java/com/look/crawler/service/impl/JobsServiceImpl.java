@@ -34,7 +34,7 @@ import java.util.List;
  */
 @Service
 public class JobsServiceImpl extends ServiceImpl<JobsMapper, Jobs> implements IJobsService {
-    private static final Logger logger = LoggerFactory.getLogger(CrawlerLication.class);
+    private static final Logger logger = LoggerFactory.getLogger(JobsServiceImpl.class);
     @Autowired
     private JobsMapper jobsMapper;
 
