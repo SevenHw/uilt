@@ -4,6 +4,8 @@ import com.look.common.util.Message;
 import com.look.crawler.model.Jobs;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 求职信息 服务类
@@ -14,4 +16,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IJobsService extends IService<Jobs> {
     Message crawlerJobMain();
+
+    List<Jobs> showJobs();
+
 }

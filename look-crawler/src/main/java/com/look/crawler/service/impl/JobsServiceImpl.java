@@ -1,5 +1,6 @@
 package com.look.crawler.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.look.common.util.HttpClientUtil;
 import com.look.common.util.Message;
@@ -204,5 +205,14 @@ public class JobsServiceImpl extends ServiceImpl<JobsMapper, Jobs> implements IJ
 
         data.add(jobs);
         return data;
+    }
+
+
+
+
+    @Override
+    public List<Jobs> showJobs() {
+        QueryWrapper<Jobs> jobsQueryWrapper = new QueryWrapper<>();
+        return jobsMapper.selectList(jobsQueryWrapper);
     }
 }

@@ -2,6 +2,7 @@ package com.look.crawler.mapper;
 
 import com.look.crawler.model.Jobs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
