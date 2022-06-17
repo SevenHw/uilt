@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -158,13 +159,14 @@ public class PlayerBioServiceImpl extends ServiceImpl<PlayerBioMapper, PlayerBio
 
         List<PlayerBio> data = new ArrayList<PlayerBio>();
         Document doc = Jsoup.parse(entity);
-        Elements elements = doc.select("tbody");
-        Elements body =  elements.select("td");
-        Elements complany = elements.select("div.er").select("a");
-        Elements address = elements.select("p.info").select("span.at");
-        Elements salary = elements.select("p.info").select("span.sal");
-        Elements datas = elements.select("p.t").select("span.time");
-        Elements SrcId = elements.select("input.checkbox");
+        Elements elements = doc.select("tr");
+        for (int i = 0; i < elements.size(); i++) {
+            Elements element = elements.get(i).select("td");
+            for (Iterator it = element.iterator(); it.hasNext();) {
+                Element elm = (Element) it.next();
+                System.out.println(elm.text());
+            }
+        }
 
         PlayerBio jobs = new PlayerBio();
 
