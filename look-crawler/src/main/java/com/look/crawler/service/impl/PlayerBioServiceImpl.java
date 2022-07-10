@@ -1,14 +1,11 @@
 package com.look.crawler.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.look.common.util.HttpClientUtil;
 import com.look.common.util.Message;
-import com.look.crawler.CrawlerLication;
-import com.look.crawler.mapper.PlayerBioMapper;
+import com.look.crawler.dao.PlayerBioMapper;
 import com.look.crawler.model.PlayerBio;
-import com.look.crawler.model.PlayerBio;
-import com.look.crawler.mapper.PlayerBioMapper;
 import com.look.crawler.service.IPlayerBioService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;

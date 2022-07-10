@@ -1,7 +1,8 @@
-package com.look.crawler.mapper;
+package com.look.crawler.dao;
 
 import com.look.crawler.model.PlayerBio;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @author astupidcoder
  * @since 2022-05-18
  */
-@Repository
+@Mapper
 public interface PlayerBioMapper extends BaseMapper<PlayerBio> {
 
 }

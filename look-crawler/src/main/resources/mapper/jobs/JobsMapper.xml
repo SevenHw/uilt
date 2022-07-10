@@ -1,7 +1,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.look.crawler.mapper.JobsMapper">
+<mapper namespace="com.look.crawler.dao.JobsMapper">
     <resultMap id="JobsMapperMap" type="com.look.crawler.model.Jobs">
         <id column="job_id" property="jobId" jdbcType="INTEGER"/>
         <id column="job_name" property="jobName" jdbcType="VARCHAR"/>

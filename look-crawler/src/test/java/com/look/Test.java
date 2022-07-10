@@ -12,16 +12,17 @@ import com.look.crawler.util.JobMybatisPlusGenerator;
 
 public class Test {
 
-    @org.junit.Test
+//    @org.junit.Test
     public void crawler(){
+        System.out.println("1111");
 //        IJobsService jobsService = new JobsServiceImpl();
 //        jobsService.crawlerJobMain();
 
-        IPlayerBioService iPlayerBioService = new PlayerBioServiceImpl();
-        iPlayerBioService.crawlerBioMain();
+//        IPlayerBioService iPlayerBioService = new PlayerBioServiceImpl();
+//        iPlayerBioService.crawlerBioMain();
     }
 
-    @org.junit.Test
+//    @org.junit.Test
     public void MybatisGenerator(){
 //        JobMybatisPlusGenerator jobMybatisPlusGenerator = new JobMybatisPlusGenerator();
 //        jobMybatisPlusGenerator.JobGenerator();
