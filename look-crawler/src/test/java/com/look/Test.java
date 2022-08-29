@@ -10,7 +10,7 @@ import com.look.crawler.service.impl.JobsServiceImpl;
 import com.look.crawler.service.impl.PlayerBioServiceImpl;
 import com.look.crawler.util.JobMybatisPlusGenerator;
 
-xxximport java.text.SimpleDateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
