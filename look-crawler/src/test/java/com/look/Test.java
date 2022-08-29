@@ -10,7 +10,39 @@ import com.look.crawler.service.impl.JobsServiceImpl;
 import com.look.crawler.service.impl.PlayerBioServiceImpl;
 import com.look.crawler.util.JobMybatisPlusGenerator;
 
+xxximport java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class Test {
+
+    @org.junit.Test
+    public void ttttt(){
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
+        Calendar cld = Calendar.getInstance(Locale.CHINA);
+        cld.setFirstDayOfWeek(Calendar.MONDAY);//以周一为首日
+        cld.setTimeInMillis(System.currentTimeMillis());//当前时间
+
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);//周一
+        System.out.println(df.format(cld.getTime()));
+        //周一
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.TUESDAY);
+        System.out.println(df.format(cld.getTime()));
+        //周一
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.WEDNESDAY);
+        System.out.println(df.format(cld.getTime()));
+        //周一
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.THURSDAY);
+        System.out.println(df.format(cld.getTime()));
+        //周一
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.FRIDAY);
+        System.out.println(df.format(cld.getTime()));
+        //周一
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+        System.out.println(df.format(cld.getTime()));
+        cld.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);//周日
+        System.out.println(df.format(cld.getTime()));
+    }
 
     @org.junit.Test
     public void crawler(){

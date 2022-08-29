@@ -50,6 +50,7 @@
         <mybatis-plus-generator.version>3.2.0</mybatis-plus-generator.version>
         <freemarker.version>2.3.28</freemarker.version>
         <lombok.version>1.18.20</lombok.version>
+        <amqp.client.version>5.9.0</amqp.client.version>
     </properties>
     <!--统一管理jar包的版本的依赖，并不是实际的引入我们jar-->
     <dependencyManagement>
@@ -243,6 +244,12 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${amqp.client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
