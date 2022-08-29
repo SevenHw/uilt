@@ -14,6 +14,7 @@
         <module>look-common</module>
         <module>look-es</module>
         <module>look-crawler</module>
+        <module>look-mybatis</module>
     </modules>
 
     <!--它用来管理所有依赖jar的版本-->
