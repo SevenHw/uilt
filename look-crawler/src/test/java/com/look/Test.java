@@ -73,10 +73,10 @@ public class Test {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://42.192.11.203:3306/jobs?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
+        dsc.setUrl("jdbc:mysql://42.192.11.203:3306/sys?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置
@@ -153,7 +153,7 @@ public class Test {
         // 写于父类中的公共字段
 //        strategy.setSuperEntityColumns("id");
 //        strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
-        strategy.setInclude(new String[]{"player_bio"});
+        strategy.setInclude(new String[]{"oa_work_overtime"});
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);

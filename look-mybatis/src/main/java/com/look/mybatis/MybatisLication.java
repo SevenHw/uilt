@@ -11,8 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MybatisLication {
     private static final Logger logger = LoggerFactory.getLogger(MybatisLication.class);
     public static void main(String[] args) {
-        logger.info("爬虫项目启动");
+        logger.info("项目启动");
         SpringApplication.run(MybatisLication.class, args);
-        logger.info("爬虫项目启动完成");
+        logger.info("项目启动完成");
     }
 }
